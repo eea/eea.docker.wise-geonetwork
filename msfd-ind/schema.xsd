@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msfd="http://dd.eionet.europa.eu/schemas/MSFD2018/msfdcommon" elementFormDefault="qualified">
+
+  <xs:include schemaLocation="schema/Indicators.xsd"/>
+
+</xs:schema>
+
+

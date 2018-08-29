@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2001-2016 Food and Agriculture Organization of the
+  ~ United Nations (FAO-UN), United Nations World Food Programme (WFP)
+  ~ and United Nations Environment Programme (UNEP)
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or (at
+  ~ your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful, but
+  ~ WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  ~ General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+  ~
+  ~ Contact: Jeroen Ticheler - FAO - Viale delle Terme di Caracalla 2,
+  ~ Rome - Italy. email: geonetwork@osgeo.org
+  -->
+
+<gns:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:gns="http://geonetwork-opensource.org/schemas/schema-ident"
+        xsi:schemaLocation="http://geonetwork-opensource.org/schemas/schema-ident http://geonetwork-opensource.org/schemas/schema-ident/schema-ident.xsd">
+  <gns:name>msfd-ind</gns:name>
+  <gns:id>310fea30-2063-11e8-b467-0ed5f89f718b</gns:id>
+  <gns:version>1.0</gns:version>
+  <gns:title xml:lang="en">Indicator Structure -- Metadata</gns:title>
+  
+  <gns:description xml:lang="en">
+    The Article 8 assessments on state and pressures, indicating progress towards achieving GES, and on
+the economic and social analysis, are typically informed by indicator assessments which draw from
+the available monitoring data in a structured manner for each assessment topic. The indicators can
+cover all aspects of the DPSIR framework, where there may be indicators related to the analysis of
+the main characteristics, others related to the analysis of pressures and impacts and others related to
+the socioeconomic analysis. Similarly, progress in achieving the Article 10 targets is to be measured
+through associated indicators. Typically, the indicator assessments provide detailed information
+including the matrices, metrics and methods used, as well as the results. Selected information from
+each indicator assessment (e.g. elements assessed, values and trends) can be used to populate the
+XML reports.
+
+  </gns:description>
+
+  <gns:schemaLocation>http://cdr.eionet.europa.eu/help/msfd/Schemas/Schemas/Indicators http://cdr.eionet.europa.eu/help/msfd/Schemas/Schemas/Indicators.xsd</gns:schemaLocation>
+  
+  <gns:autodetect>
+    <gns:elements type="root">
+      <Indicators/>
+	  
+	  
+    </gns:elements>
+  </gns:autodetect>
+
+</gns:schema>
