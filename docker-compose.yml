@@ -1,0 +1,18 @@
+version: '2'
+
+volumes:
+    wise-geonetwork-webapps:
+       driver: local
+
+services:
+  wise-geonetwork:
+    image: wise-geonetwork:3.4.2
+    environment:
+      TZ: Europe/Copenhagen
+    ports:
+    - 50002:8080
+    volumes:
+    - wise-geonetwork-webapps:/usr/local/tomcat/webapps
+    mem_reservation: 4294967296
+    
+
