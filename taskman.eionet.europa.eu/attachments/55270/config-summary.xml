@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Taskman — Think big, act small</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="Redmine">
+<meta name="keywords" content="issue,bug,tracker">
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ggkrwq9TcLOhUASCPZ8FiWYcWlfNgJB8lKawHQCXxvSgSMfpf+urc05+CwtbSGYvkLzOQ3vK+Vwtj//66jowgg==" />
+<link rel='shortcut icon' href='/favicon.ico?1515440299' />
+<link rel="stylesheet" media="all" href="/stylesheets/jquery/jquery-ui-1.11.0.css?1515440299" />
+<link rel="stylesheet" media="all" href="/themes/eea.redmine.theme/stylesheets/application.css?1528813369" />
+<link rel="stylesheet" media="all" href="/themes/eea.redmine.theme/stylesheets/responsive.css?1528813369" />
+
+<script src="/javascripts/jquery-1.11.1-ui-1.11.0-ujs-3.1.4.js?1515440299"></script>
+<script src="/javascripts/application.js?1515440299"></script>
+<script src="/javascripts/responsive.js?1515440299"></script>
+<script>
+//<![CDATA[
+$(window).load(function(){ warnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+<script src="/themes/eea.redmine.theme/javascripts/theme.js?1528813369"></script>
+<style type="text/css">
+/* <![CDATA[ */
+body.controller-repositories table.changesets tr.changeset td.id{
+  white-space: nowrap;
+}
+a.add_subversion_links_link{
+  margin-left: 0.25em !important;
+  margin-right: 0.25em !important;
+}
+img.add_subversion_links_icon{
+  vertical-align: middle;
+}
+/* ]]> */
+</style>
+ <link rel="stylesheet" media="screen" href="/plugin_assets/redmine_banner/stylesheets/banner.css?1529002945" /><script src="/plugin_assets/redmine_banner/javascripts/banner.js?1529002945"></script>  <link rel="stylesheet" media="screen" href="/plugin_assets/redmine_ldap_sync/stylesheets/ldap_sync.css?1529002945" /> <link rel="stylesheet" media="screen" href="/plugin_assets/redmine_wiki_backlinks/stylesheets/wiki_links.css?1529002945" /> <link rel="stylesheet" media="screen" href="/plugin_assets/redmine_agile/stylesheets/redmine_agile.css?1529002945" /> <link rel="stylesheet" media="screen" href="/plugin_assets/redmine_contacts_helpdesk/stylesheets/helpdesk.css?1529002945" /> <script src="/plugin_assets/additionals/javascripts/redirect.js?1529002945"></script><link rel="stylesheet" media="screen" href="/plugin_assets/additionals/stylesheets/fontawesome-all.min.css?1529002945" />
+<link rel="stylesheet" media="screen" href="/plugin_assets/additionals/stylesheets/additionals.css?1529002945" /><script src="/plugin_assets/additionals/javascripts/additionals_delay_ajax_indicator.js?1529002944"></script>
+ <script src="/plugin_assets/redmine_checklists/javascripts/checklists.js?1529002945"></script><link rel="stylesheet" media="screen" href="/plugin_assets/redmine_checklists/stylesheets/checklists.css?1529002945" />
+<!-- page specific tags -->
+  <script src="/plugin_assets/redmine_crm/javascripts/select2.js?1529002935"></script><link rel="stylesheet" media="screen" href="/plugin_assets/redmine_crm/stylesheets/select2.css?1529002935" />
+  <link rel="stylesheet" media="screen" href="/plugin_assets/redmine_contacts/stylesheets/contacts.css?1529002945" />
+  <script src="/plugin_assets/redmine_contacts/javascripts/contacts_select2.js?1529002945"></script>
+  <script src="/plugin_assets/redmine_contacts/javascripts/contacts.js?1529002945"></script>
+</head>
+<body class="theme-Eea.redmine.theme controller-account action-login">
+
+<a id="gototop">
+</a><div id="wrapper">
+
+<div class="flyout-menu js-flyout-menu">
+
+
+        <div class="flyout-menu__search">
+            <form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+            
+            <label class="search-magnifier search-magnifier--flyout" for="flyout-search">&#9906;</label>
+            <input type="text" name="q" id="flyout-search" class="small js-search-input" placeholder="Search" />
+</form>        </div>
+
+
+
+    <h3>General</h3>
+    <span class="js-general-menu"></span>
+
+    <span class="js-sidebar flyout-menu__sidebar"></span>
+
+    <h3>Profile</h3>
+    <span class="js-profile-menu"></span>
+
+</div>
+
+<div id="wrapper2">
+<div id="wrapper3">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a class="login" href="/login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a class="home" href="/">Home</a></li><li><a class="projects" href="/projects">Projects</a></li><li><a class="external custom-menu0" title="Collaborate faster with EEA Riot Chat" href="https://riot.eea.europa.eu/#/directory">Riot Chat NEW!</a></li><li><a class="external custom-menu1" title="Taskman FAQ" href="https://taskman.eionet.europa.eu/projects/public-docs/wiki/Taskman_FAQ">Taskman FAQ</a></li><li><a class="external help" href="https://taskman.eionet.europa.eu/projects/public-docs/wiki/Taskman_Help">Help</a></li></ul></div>
+
+<div id="header">
+
+    <a href="#" class="mobile-toggle-button js-flyout-menu-toggle-button"></a>
+
+    <div id="quick-search">
+        <form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input type="hidden" name="scope" />
+        
+        <label for="q">
+          <a accesskey="4" href="/search">Search</a>:
+        </label>
+        <input type="text" name="q" id="q" size="20" class="small" accesskey="f" />
+</form>        <div id="project-jump" class="drdn"><span class="drdn-trigger">Jump to a project...</span><div class="drdn-content"><div class="quick-search"><input type="text" name="q" id="projects-quick-search" value="" class="autocomplete" data-automcomplete-url="/projects/autocomplete.js?jump=account" autocomplete="off" /></div><div class="drdn-items projects selection"></div><div class="drdn-items all-projects selection"><a href="/projects?jump=account">All Projects</a></div></div></div>
+    </div>
+
+    <h1>Taskman — Think big, act small</h1>
+
+</div>
+
+<div id="main" class="nosidebar">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+        
+        
+
+<div id="login-form">
+  <form onsubmit="return keepAnchorOnSignIn(this);" action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Uxw3eqvGXUB8wI1fLkJDMRJKoBM8GxV/Is3i8HZLN1VxXdtRe36GgJPugtZIlSCX5Oo0B4pRfF+b5K0XnObBIw==" />
+  <input type="hidden" name="back_url" value="https://taskman.eionet.europa.eu/attachments/55270/config-summary.xml" />
+  
+  <label for="username">Login</label>
+  <input type="text" name="username" id="username" tabindex="1" />
+  
+  <label for="password">
+    Password
+    
+  </label>
+  <input type="password" name="password" id="password" tabindex="2" />
+  
+  
+  
+  <input type="submit" name="login" value="Login" tabindex="5" id="login-submit" />
+</form></div>
+
+<br /><div class="login-additionals"><a name="Help"></a>
+<h3 >Help<a href="#Help" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><strong>Use your Eionet account</strong>. Don't have one? contact <a href="http://www.eionet.europa.eu/helpdesk/" class="external">Eionet helpdesk</a> and CC your contact person at EEA.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>Lost password?</strong>: You can <a href="http://www.eionet.europa.eu/password-reset" class="external">reset your password</a></li>
+	</ul>
+
+
+	<ul>
+	<li><strong>Other issues</strong>: contact us via Riot <a href="https://riot.eea.europa.eu/#/room/#taskman:matrix.eea.europa.eu" class="external">#taskman:matrix.eea.europa.eu</a> (Eionet login)</li>
+	</ul></div>
+
+<script>
+//<![CDATA[
+$('#username').focus();
+//]]>
+</script>
+
+          
+        <div style="clear:both;"></div>
+    </div>
+</div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+<div id="ajax-modal" style="display:none;"></div>
+
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="https://www.redmine.org/">Redmine</a> © 2006-2017 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+  <script type="text/javascript">
+  var field_formats = ['contact', 'company'];
+  var contact_filter_urls =  {
+    'company': "/auto_completes/contacts?is_company=true",
+    'contact': "/auto_completes/contacts"
+  };
+  field_formats.push('deal');
+  contact_filter_urls['deal'] = '/auto_completes/deals';
+</script>
+ <div class="additionals-footer"><p><a href="https://www.eea.europa.eu/legal/privacy" class="external">Data Protection Notice</a></p></div>
+</body>
+</html>
