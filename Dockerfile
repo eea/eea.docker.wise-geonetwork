@@ -27,6 +27,6 @@ RUN mkdir -p /tmp/msfd-ind
 COPY msfd-ind /tmp/msfd-ind
 
 COPY startup.sh /
-RUN chmod 777 startup.sh
+RUN chmod 777 /startup.sh
 
 #RUN mv /usr/local/tomcat/webapps/geonetwork /usr/local/tomcat/webapps/ROOT
