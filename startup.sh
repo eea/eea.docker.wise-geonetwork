@@ -1,12 +1,15 @@
-cp /tmp/config-summary.xml /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-summary.xml
-cp /tmp/recordView.html /usr/local/tomcat/webapps/geonetwork/catalog/views/default/templates/recordView.html
-cp /tmp/config-lucene.xml /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-lucene.xml
-cp /tmp/en-core.json /usr/local/tomcat/webapps/geonetwork/catalog/locales/en-core.json
-cp /tmp/EEA.png  /usr/local/tomcat/webapps/geonetwork/images/harvesting/EEA.png
-mkdir -p /usr/local/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins/msfd-ind
-cp -r /tmp/msfd-ind /usr/local/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins/msfd-ind
+# cp /tmp/config-summary.xml /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-summary.xml
+# cp /tmp/recordView.html /usr/local/tomcat/webapps/geonetwork/catalog/views/default/templates/recordView.html
+# cp /tmp/config-lucene.xml /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-lucene.xml
+# cp /tmp/en-core.json /usr/local/tomcat/webapps/geonetwork/catalog/locales/en-core.json
+# cp /tmp/EEA.png  /usr/local/tomcat/webapps/geonetwork/images/harvesting/EEA.png
+# mkdir -p /usr/local/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins/msfd-ind
+# cp -r /tmp/msfd-ind /usr/local/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins/msfd-ind
 
 #!/bin/bash
+chown -v root:root /usr/local/tomcat
+chmod 777 /
+
 set -e
 
 if [ "$1" = 'catalina.sh' ]; then
