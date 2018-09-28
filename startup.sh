@@ -21,7 +21,7 @@ cp -r /tmp/msfd-ind /usr/local/tomcat/webapps/geonetwork/WEB-INF/data/config/sch
 
 mkdir -p /usr/local/tomcat/webapps/geonetwork/WEB-INF/classes/setup/sql/data
 
-chown -R root:root /usr/local/tomcat/
-chmod -R 777 /usr/local/tomcat/
+# chown -R root:root /usr/local/tomcat/
+# chmod -R 777 /usr/local/tomcat/
 
 exec /entrypoint.sh "$@"
