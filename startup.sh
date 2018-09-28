@@ -19,6 +19,9 @@ cp /tmp/EEA.png  /usr/local/tomcat/webapps/geonetwork/images/harvesting/EEA.png
 mkdir -p /usr/local/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins/
 cp -r /tmp/msfd-ind /usr/local/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins/msfd-ind
 
-chown -R root:root /usr/local/tomcat/webapps/
+mkdir -p /usr/local/tomcat/webapps/geonetwork/WEB-INF/classes/setup/sql/data
+
+chown -R root:root /usr/local/tomcat/
+chmod -R 777 /usr/local/tomcat/
 
 exec /entrypoint.sh "$@"
