@@ -36,6 +36,6 @@ ENTRYPOINT [ "/startup.sh" ]
 
 #ENTRYPOINT [ "/entrypoint.sh" ]
 
-CMD ["catalina.sh","run"]
+CMD ["catalina.sh","debug"]
 
 #RUN mv /usr/local/tomcat/webapps/geonetwork /usr/local/tomcat/webapps/ROOT
