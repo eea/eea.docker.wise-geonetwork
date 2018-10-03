@@ -3,7 +3,7 @@ FROM geonetwork:3.4.2
 MAINTAINER michimau <mauro.michielon@eea.europa.eu>
 
 RUN apt-get -y update
-RUN apt-get -y install locate vim
+RUN apt-get -y install locate vim procps mc
 
 RUN mkdir /webapps/
 COPY config-summary.xml config-lucene.xml en-core.json recordView.html EEA.png /webapps/
@@ -22,8 +22,6 @@ COPY config-summary.xml config-lucene.xml en-core.json recordView.html EEA.png /
 #COPY EEA.png  /usr/local/tomcat/webapps/geonetwork/images/harvesting/EEA.png
 #RUN mkdir -p /usr/local/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins/msfd-ind
 #COPY msfd-ind /usr/local/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins/msfd-ind
-
-RUN apt-get -y install default-jdk
 
 COPY startup.sh /
 
