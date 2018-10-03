@@ -29,9 +29,13 @@ COPY startup.sh /
 
 RUN chmod +x /startup.sh
 
-ENTRYPOINT [ "/startup.sh" ]
-ENTRYPOINT [ "/entrypoint.sh" ]
+#ENTRYPOINT [ "/startup.sh" ]
+#ENTRYPOINT [ "/entrypoint.sh" ]
 
-CMD ["catalina.sh","run"]
+#CMD ["catalina.sh","run"]
+
+ENTRYPOINT [ "sh" ]
+
+CMD ["-c","tail -f /dev/null"]
 
 #RUN mv /usr/local/tomcat/webapps/geonetwork /usr/local/tomcat/webapps/ROOT
