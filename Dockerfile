@@ -23,6 +23,7 @@ COPY config-summary.xml config-lucene.xml en-core.json recordView.html EEA.png /
 #RUN mkdir -p /usr/local/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins/msfd-ind
 #COPY msfd-ind /usr/local/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins/msfd-ind
 
+RUN apt-get -y install default-jdk
 
 COPY startup.sh /
 
