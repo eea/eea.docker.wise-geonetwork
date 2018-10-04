@@ -27,6 +27,8 @@ COPY startup.sh /
 
 RUN chmod +x /startup.sh
 
+USER root
+
 #ENTRYPOINT [ "/startup.sh" ]
 #ENTRYPOINT [ "/entrypoint.sh" ]
 
