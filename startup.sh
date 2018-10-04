@@ -37,7 +37,7 @@ file=/usr/local/tomcat/webapps/geonetwork/images/harvesting/EEA.png
 if [ ! -f "$file" ]; then
     mkdir -p /usr/local/tomcat/webapps/geonetwork/images/harvesting/
     cp /webapps/EEA.png  /usr/local/tomcat/webapps/geonetwork/images/harvesting/EEA.png
- fi
+fi
 ls $file
 
 echo "Finished script"
@@ -48,4 +48,6 @@ if [ "$1" = 'catalina.sh' ]; then
     echo "Intrat in IF"
     #Set geonetwork data dir
     export CATALINA_OPTS="$CATALINA_OPTS -Dgeonetwork.dir=$DATA_DIR"
+fi
+
 exec "$@"
