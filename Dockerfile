@@ -5,9 +5,6 @@ MAINTAINER michimau <mauro.michielon@eea.europa.eu>
 RUN apt-get -y update
 RUN apt-get -y install locate vim procps mc
 
-#RUN mkdir /webapps/
-#COPY config-summary.xml config-lucene.xml en-core.json recordView.html EEA.png /webapps/
-
 RUN rm -rf /usr/local/tomcat/webapps/examples* \
            /usr/local/tomcat/webapps/docs* \
           /usr/local/tomcat/webapps/ROOT* \
@@ -30,12 +27,7 @@ COPY startup.sh /
 RUN chmod +x /startup.sh
 
 RUN ls -ltr /usr/local/tomcat/webapps
-#ENTRYPOINT [ "/entrypoint.sh" ]
+
 ENTRYPOINT [ "/startup.sh" ]
 
 CMD ["catalina.sh","run"]
-
-#ENTRYPOINT [ "sh" ]
-#CMD ["-c","tail -f /dev/null"]
-
-#RUN mv /usr/local/tomcat/webapps/geonetwork /usr/local/tomcat/webapps/ROOT
