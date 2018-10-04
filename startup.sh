@@ -15,5 +15,4 @@ if [ "$1" = 'catalina.sh' ]; then
         export CATALINA_OPTS="$CATALINA_OPTS -Dgeonetwork.dir=$DATA_DIR"
 fi
 
-find .
 exec "$@"
