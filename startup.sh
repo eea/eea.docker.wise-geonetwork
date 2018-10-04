@@ -2,7 +2,7 @@
 set -e
 
 echo "Starting sleep"
-sleep 60
+sleep 5
 echo "End sleep"
 
 file=./usr/local/tomcat/webapps/geonetwork/WEB-INF/config-summary.xml
@@ -37,4 +37,12 @@ fi
 
 echo "Finished script"
 
-catalina.sh run
+if [ "$1" = 'catalina.sh' ]; then
+        echo "Mkdir data"
+        mkdir -p "$DATA_DIR"
+        echo "Intrat in IF"
+        #Set geonetwork data dir
+        export CATALINA_OPTS="$CATALINA_OPTS -Dgeonetwork.dir=$DATA_DIR"
+fi
+
+exec "$@"
