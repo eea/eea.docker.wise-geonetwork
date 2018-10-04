@@ -3,7 +3,6 @@ FROM geonetwork:3.4.2
 MAINTAINER michimau <mauro.michielon@eea.europa.eu>
 
 RUN apt-get -y update
-RUN apt-get -y install locate vim procps mc
 
 RUN rm -rf /usr/local/tomcat/webapps/examples* \
            /usr/local/tomcat/webapps/docs* \
@@ -25,8 +24,6 @@ RUN cp -pr /usr/local/tomcat/webapps /webapps
 COPY startup.sh /
 
 RUN chmod +x /startup.sh
-
-RUN ls -ltr /usr/local/tomcat/webapps
 
 ENTRYPOINT [ "/startup.sh" ]
 
