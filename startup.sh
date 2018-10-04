@@ -2,7 +2,7 @@
 set -e
 
 echo "Starting sleep"
-sleep 5
+sleep 60
 echo "End sleep"
 
 file=./usr/local/tomcat/webapps/geonetwork/WEB-INF/config-summary.xml
