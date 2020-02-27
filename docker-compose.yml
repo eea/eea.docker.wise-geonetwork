@@ -1,18 +1,64 @@
-version: '2'
-
-volumes:
-    wise-geonetwork-webapps:
-       driver: local
+version: "2.1"
 
 services:
-  wise-geonetwork:
-    image: wise-geonetwork:3.4.2
+  deploy:
+    image: geonetwork:3.10.0
     environment:
       TZ: Europe/Copenhagen
     ports:
-    - 50002:8080
+    - 7000:8080
+    # volumes:
+    # - ./webapps:/usr/local/tomcat/webapps
+    # mem_reservation: 4294967296
+    entrypoint: sh -c "tail -f /dev/null"
+    environment:
+      DATA_DIR: /var/lib/geonetwork_data
     volumes:
-    - wise-geonetwork-webapps:/usr/local/tomcat/webapps
+      - ./data:/var/lib/geonetwork_data
+      - ./deploy:/usr/local/tomcat/webapps
+    # - ./core-geonetwork:/usr/local/tomcat/webapps
+
+  build:
+    # image: "maven:3-jdk-8"
+    build: ./docker/
+    volumes:
+      - ./build:/usr/local/tomcat/webapps
+      - ./m2:/root/.m2/
+    entrypoint: sh -c "tail -f /dev/null"
+    ports:
+    - 7001:8080
+
+  wise-geonetwork:
+    #image: eeacms/wise-geonetwork:3.4.2
+    image: geonetwork:3.10.0
+    environment:
+      TZ: Europe/Copenhagen
+    ports:
+    - 3000:8080
+    volumes:
+    - ./webapps:/usr/local/tomcat/webapps
     mem_reservation: 4294967296
-    
+    entrypoint: sh -c "tail -f /dev/null"
+
+  # geonetwork:
+  #   image: geonetwork:3.10.0
+  #   environment:
+  #     TZ: Europe/Copenhagen
+  #   ports:
+  #   - 7000:8080
+  #   # volumes:
+  #   # - ./webapps:/usr/local/tomcat/webapps
+  #   # mem_reservation: 4294967296
+  #   entrypoint: sh -c "tail -f /dev/null"
+  #   environment:
+  #     DATA_DIR: /var/lib/geonetwork_data
+  #   volumes:
+  #     - ./data:/var/lib/geonetwork_data
+  #     - ./water-webapps:/usr/local/tomcat/webapps
+
+  # devel:
+  #   image: "maven:3-jdk-14"
+  #   volumes:
+  #     - ./geonetwork-eea:/apps/eea
+  #   entrypoint: sh -c "tail -f /dev/null"
 

@@ -1,0 +1,9 @@
+./build
+./data
+./deploy
+./geonetwork*
+./m2*
+./water*
+./webapps
+*.zip
+*.tgz

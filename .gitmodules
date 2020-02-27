@@ -1,0 +1,4 @@
+[submodule "geonetwork-build"]
+	path = build/core-geonetwork
+	url = https://github.com/tiberiuichim/core-geonetwork.git
+  branch = water
