@@ -22,3 +22,10 @@ also use the ``./run_dev_server.sh`` script to start a development version. See
   https://github.com/tiberiuichim/core-geonetwork/tree/water
 
 - ``deploy``: a service meant to allow testing the built geonetwork.
+
+
+## Releases
+
+To create a new docker image, just make a new Github release. See docker hub
+page:
+https://hub.docker.com/repository/docker/eeacms/wise-geonetwork/tags
