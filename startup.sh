@@ -4,7 +4,10 @@ set -e
 if [ -f /webapps/geonetwork.war ] ; then
     rm -rf /usr/local/tomcat/webapps/geonetwork.war
     rm -rf /usr/local/tomcat/webapps/geonetwork/*
-    mv /webapps/geonetwork.war  /usr/local/tomcat/webapps/
+    mkdir -p /usr/local/tomcat/webapps/geonetwork/
+    mv /webapps/geonetwork.war /usr/local/tomcat/webapps/geonetwork/
+    cd /usr/local/tomcat/webapps/geonetwork
+    unzip geonetwork.war
 fi
 
 if [ "$1" = 'catalina.sh' ]; then
