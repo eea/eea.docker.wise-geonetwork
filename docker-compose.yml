@@ -40,6 +40,17 @@ services:
     mem_reservation: 4294967296
     entrypoint: sh -c "tail -f /dev/null"
 
+  production:
+    image: geo-tibi
+    environment:
+      TZ: Europe/Copenhagen
+    ports:
+    - 7002:8080
+    mem_reservation: 4294967296
+    entrypoint: sh -c "tail -f /dev/null"
+    volumes:
+      - ./deploy:/usr/local/tomcat/webapps
+
   # geonetwork:
   #   image: geonetwork:3.10.0
   #   environment:

@@ -1,8 +1,10 @@
 #!/bin/bash
 set -e
 
-if [ -d /webapps/geonetwork ] && [ ! -d /usr/local/tomcat/webapps/geonetwork ] ; then
-    mv /webapps/geonetwork  /usr/local/tomcat/webapps/
+if [ -f /webapps/geonetwork.war ] ; then
+    rm -rf /usr/local/tomcat/webapps/geonetwork.war
+    rm -rf /usr/local/tomcat/webapps/geonetwork/*
+    mv /webapps/geonetwork.war  /usr/local/tomcat/webapps/
 fi
 
 if [ "$1" = 'catalina.sh' ]; then
