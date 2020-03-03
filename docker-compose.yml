@@ -29,12 +29,12 @@ services:
     - 7001:8080
 
   wise-geonetwork:
-    #image: eeacms/wise-geonetwork:3.4.2
-    image: geonetwork:3.10.0
+    image: eeacms/wise-geonetwork:3.4.2
+    # image: geo-tibi
     environment:
       TZ: Europe/Copenhagen
     ports:
-    - 3000:8080
+    - 3002:8080
     volumes:
     - ./webapps:/usr/local/tomcat/webapps
     mem_reservation: 4294967296

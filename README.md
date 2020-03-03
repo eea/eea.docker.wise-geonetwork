@@ -30,6 +30,18 @@ deploy a new geonetwork, dump the updated geonetwork.war in the
 /usr/local/tomcat/webapps folder. Tomcat should automatically detect a newer
 war and deploy that one.
 
+In case Tomcat doesn't properly unpack the war file, you can stop the tomcat
+container, then do:
+
+```
+rm -rf /usr/local/tomcat/webapps/geonetwork/*
+mv geonetwork.war /usr/local/tomcat/webapps/geonetwork/
+cd /usr/local/tomcat/webapps/geonetwork/
+unzip geonetwork.war
+```
+
+Then start the container.
+
 
 ## Developing
 
