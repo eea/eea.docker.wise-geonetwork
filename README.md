@@ -23,6 +23,8 @@ To create a new docker image, just make a new Github release. See docker hub
 page:
 https://hub.docker.com/repository/docker/eeacms/wise-geonetwork/tags
 
+Note: make sure to disable the proxy service in web.xml after deployment.
+
 ### Deploying
 
 If for some reason the deployment has a problem, or there's a need to manually
@@ -53,3 +55,4 @@ also use the ``./run_dev_server.sh`` script to start a development version. See
 
 Change code in ``web-ui/src/main/resources/catalog/views``. Changes should be
 automatically detected and observed by reloading the page in the browser.
+
